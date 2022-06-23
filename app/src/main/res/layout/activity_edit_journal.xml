@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_1"
+    tools:context=".EditJournalActivity">
+    <include
+        android:id="@+id/fragment_frame"
+        layout="@layout/activity_choose_layout_fragment"
+        android:visibility="gone"
+        android:elevation="5dp"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.6"
+        android:layout_height="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" >
+
+    </include>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/show_selection_button"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.06"
+        android:text="Spreads"
+        android:background="@color/side_buttons"
+        android:textColor="@color/white"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:onClick="showSelection"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Journal Title"
+        android:fontFamily="@font/back"
+        android:textSize="30sp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/journal_frame"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/back_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.04"
+        app:layout_constraintWidth_percent="0.08"
+        android:text="B"
+        android:textColor="@color/white"
+        android:background="@color/dark_2"
+        android:onClick="prevPage"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/journal_frame"
+        app:layout_constraintTop_toTopOf="@id/journal_frame"
+        app:layout_constraintBottom_toBottomOf="@id/journal_frame" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/right_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.04"
+        app:layout_constraintWidth_percent="0.08"
+        android:text="F"
+        android:background="@color/dark_2"
+        android:textColor="@color/white"
+        android:onClick="nextPage"
+        app:layout_constraintLeft_toRightOf="@id/journal_frame"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/journal_frame"
+        app:layout_constraintBottom_toBottomOf="@id/journal_frame" />
+    <FrameLayout
+        android:id="@+id/journal_frame"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintWidth_percent="0.75"
+        app:layout_constraintHeight_percent="0.8"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintBottom_toTopOf="@id/add_page"/>
+    <FrameLayout
+        android:id="@+id/journal_frame_partial"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.3"
+        app:layout_constraintTop_toTopOf="@id/journal_frame"
+        app:layout_constraintBottom_toBottomOf="@id/journal_frame"
+        app:layout_constraintRight_toRightOf="@id/journal_frame" />
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/add_page"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Page"
+        android:background="@color/dark_1"
+        android:textColor="@color/white"
+        android:onClick="addPage"
+        android:padding="4dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/journal_frame" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

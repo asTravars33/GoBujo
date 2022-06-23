@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_2"
+    tools:context=".RoomActivity">
+    <TextView
+        android:id="@+id/title"
+        android:fontFamily="@font/back"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textSize="24sp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/chat_scroll" />
+    <TextView
+        android:id="@+id/people_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="19sp"
+        android:text="People"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tasks_list_scroll"
+        app:layout_constraintBottom_toTopOf="@id/people_list" />
+    <LinearLayout
+        android:id="@+id/people_list"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintWidth_percent="0.85"
+        app:layout_constraintHeight_percent="0.13"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/people_names">
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/people_names"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.85"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.06"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/chat_label"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Chat"
+        android:textSize="19sp"
+        android:gravity="center"
+        app:layout_constraintLeft_toLeftOf="@id/chat_scroll"
+        app:layout_constraintRight_toRightOf="@id/chat_scroll"
+        app:layout_constraintTop_toTopOf="@id/tasks_list_scroll"
+        app:layout_constraintBottom_toTopOf="@id/chat_scroll" />
+    <ScrollView
+        android:id="@+id/chat_scroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintBottom_toTopOf="@id/send_message" >
+        <LinearLayout
+            android:id="@+id/chat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/send_message"
+        android:layout_marginLeft="10dp"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.5"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintTop_toBottomOf="@id/chat_scroll"
+        app:layout_constraintBottom_toTopOf="@id/people_label"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:weightSum="1"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/message_text"
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="0.7" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/send_button"
+            android:onClick="sendMessage"
+            android:text="Send"
+            android:textColor="@color/white"
+            android:background="@color/dark_1"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_weight="0.3" />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/background"
+        android:layout_marginRight="10dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toRightOf="@id/chat_scroll"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/chat_label"
+       app:layout_constraintBottom_toBottomOf="@id/send_message" />
+    <TextView
+        android:id="@+id/hidden_clickable"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.4"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.6"
+        android:elevation="2dp"
+        android:layout_marginRight="10dp"
+        app:layout_constraintLeft_toLeftOf="@id/background"
+        app:layout_constraintRight_toRightOf="@id/background"
+        app:layout_constraintTop_toTopOf="@id/background"
+        app:layout_constraintBottom_toBottomOf="@id/background" />
+    <ScrollView
+        android:id="@+id/tasks_list_scroll"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent="0.4"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.6"
+        android:background="@color/background_2_darker"
+        android:layout_marginRight="10dp"
+        app:layout_constraintLeft_toLeftOf="@id/background"
+        app:layout_constraintRight_toRightOf="@id/background"
+        app:layout_constraintTop_toTopOf="@id/background"
+        app:layout_constraintBottom_toBottomOf="@id/background" >
+        <LinearLayout
+            android:id="@+id/tasks_list_layout"
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+            <TextView
+                android:text="Today's Tasks"
+                android:textSize="19sp"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

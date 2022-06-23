@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:background="@color/dark_1"
+    android:weightSum="1"
+    android:orientation="horizontal"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/journal_tab"
+        android:text="Journal"
+        android:onClick="startJournal"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_weight="0.33"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/work_tab"
+        android:text="Work"
+        android:onClick="startWork"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_weight="0.33"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/settings_tab"
+        android:text="Settings"
+        android:onClick="startSettings"
+        android:gravity="center"
+        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_weight="0.33"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
+</LinearLayout>

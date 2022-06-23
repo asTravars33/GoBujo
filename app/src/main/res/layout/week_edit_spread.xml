@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@+id/spread_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+    <ScrollView
+        android:id="@+id/monday_scroll"
+        android:padding="7dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintHeight_percent="0.24"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintVertical_bias="0.1">
+        <LinearLayout 
+            android:id="@+id/monday"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="1"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/add_monday"
+                android:tag="0"
+                android:text="Add Task"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/light_button"
+                android:layout_marginTop="35dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"/>
+        </LinearLayout>
+    </ScrollView>
+    <ScrollView
+        android:id="@+id/tuesday_scroll"
+        android:padding="7dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintHeight_percent="0.24"
+        app:layout_constraintLeft_toRightOf="@id/monday_scroll"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1">
+        <LinearLayout android:weightSum="1"
+            android:id="@+id/tuesday"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/add_tuesday"
+                android:tag="1"
+                android:text="Add Task"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/light_button"
+                android:layout_marginTop="35dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.5" />
+        </LinearLayout>
+    </ScrollView>
+    <ScrollView
+        android:id="@+id/wednesday_scroll"
+        android:padding="7dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintHeight_percent="0.24"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/monday_scroll">
+        <LinearLayout android:weightSum="1"
+            android:id="@+id/wednesday"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/add_wednesday"
+                android:tag="2"
+                android:text="Add Task"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/light_button"
+                android:layout_marginTop="45dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.5" />
+        </LinearLayout>
+    </ScrollView>
+    <ScrollView
+        android:id="@+id/thursday_scroll"
+        android:padding="7dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintHeight_percent="0.24"
+        app:layout_constraintLeft_toRightOf="@id/wednesday_scroll"
+        app:layout_constraintTop_toBottomOf="@id/tuesday_scroll">
+        <LinearLayout android:weightSum="1"
+            android:id="@+id/thursday"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/add_thursday"
+                android:tag="3"
+                android:text="Add Task"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/light_button"
+                android:layout_marginTop="45dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.5" />
+        </LinearLayout>
+    </ScrollView>
+    <ScrollView
+        android:id="@+id/friday_scroll"
+        android:padding="7dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintHeight_percent="0.24"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/wednesday_scroll">
+        <LinearLayout android:weightSum="1"
+            android:id="@+id/friday"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/add_friday"
+                android:tag="4"
+                android:text="Add Task"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/light_button"
+                android:layout_marginTop="55dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.5" />
+        </LinearLayout>
+    </ScrollView>
+    <ScrollView
+        android:id="@+id/saturday_scroll"
+        android:padding="7dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintHeight_percent="0.24"
+        app:layout_constraintLeft_toRightOf="@id/friday_scroll"
+        app:layout_constraintTop_toBottomOf="@id/thursday_scroll">
+        <LinearLayout android:weightSum="1"
+            android:id="@+id/saturday"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/add_saturday"
+                android:tag="5"
+                android:text="Add Task"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/light_button"
+                android:layout_marginTop="55dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.5" />
+        </LinearLayout>
+    </ScrollView>
+    <ScrollView
+        android:id="@+id/icon_scroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintHeight_percent="0.24"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/friday_scroll">
+        <LinearLayout android:weightSum="1"
+            android:id="@+id/icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </ScrollView>
+    <ScrollView
+        android:id="@+id/sunday_scroll"
+        android:padding="7dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.5"
+        app:layout_constraintHeight_percent="0.24"
+        app:layout_constraintLeft_toRightOf="@id/icon_scroll"
+        app:layout_constraintTop_toBottomOf="@id/saturday_scroll">
+        <LinearLayout android:weightSum="1"
+            android:id="@+id/sunday"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/add_sunday"
+                android:tag="6"
+                android:text="Add Task"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/light_button"
+                android:layout_marginTop="65dp"
+                android:layout_height="0dp"
+                android:layout_weight="0.5" />
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

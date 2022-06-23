@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/side_buttons"
+    android:elevation="5dp"
+    tools:context=".EditJournalActivity">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/back_button"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.04"
+        android:text="Back"
+        android:background="@color/white"
+        android:textColor="@color/side_buttons"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:onClick="doneSelection"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/month_spreads_title"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Month Spreads"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/month_spreads_scroll"/>
+    <HorizontalScrollView
+        android:id="@+id/month_spreads_scroll"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.3"
+        android:layout_width="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/month_spreads_title"
+        app:layout_constraintBottom_toTopOf="@id/week_spreads_title">
+        <LinearLayout
+            android:id="@+id/month_spreads"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="horizontal">
+            <ImageView
+                android:src="@drawable/paint_month"
+                android:tag="paint_month"
+                android:layout_width="137dp"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:src="@drawable/leaves_month"
+                android:tag="leaves_month"
+                android:layout_width="137dp"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:src="@drawable/flowers_month"
+                android:tag="flowers_month"
+                android:layout_width="137dp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </HorizontalScrollView>
+    <TextView
+        android:id="@+id/week_spreads_title"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Week Spreads"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/month_spreads_scroll"
+        app:layout_constraintBottom_toTopOf="@id/week_spreads_scroll"/>
+    <HorizontalScrollView
+        android:id="@+id/week_spreads_scroll"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.3"
+        android:layout_width="match_parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/week_spreads_title"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <LinearLayout
+            android:id="@+id/week_spreads"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="horizontal">
+            <ImageView
+                android:src="@drawable/paint_week"
+                android:tag="paint_week"
+                android:layout_width="137dp"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:src="@drawable/leaves_week"
+                android:tag="leaves_week"
+                android:layout_width="137dp"
+                android:layout_height="match_parent" />
+            <ImageView
+                android:src="@drawable/flowers_week"
+                android:tag="flowers_week"
+                android:layout_width="137dp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </HorizontalScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

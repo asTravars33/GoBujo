@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "777689968990",
+    "firebase_url": "https://bujo-11fcf-default-rtdb.firebaseio.com",
+    "project_id": "bujo-11fcf",
+    "storage_bucket": "bujo-11fcf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:777689968990:android:06dc984a985f601959dfcf",
+        "android_client_info": {
+          "package_name": "com.wangjessica.jwfinalproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "777689968990-3n6j19vvi1b4mkid61iv70p6pefq6fie.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHxPQTnXG_dOyifawto-2LyAeqPSFHHcQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "777689968990-3n6j19vvi1b4mkid61iv70p6pefq6fie.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
